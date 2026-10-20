@@ -185,3 +185,9 @@ Les pages de connexion et de création d'espace ont été observées pendant la 
 ### Limites
 - L'utilisation du lien après révocation et après expiration n'a pas été testée.
 - Les permissions détaillées sur les réunions, transcriptions, résumés et comptes rendus partagés n'ont pas été vérifiées.
+
+
+### TEST-022 — Révocation d'une invitation : non testé
+**Statut : NOT TESTED**
+
+La révocation d'une invitation et l'invalidation effective du lien associé n'ont pas été testées. Aucun résultat ne peut donc être conclu sur le comportement de cette fonctionnalité. Ce point est à conserver dans les limites de couverture de l'audit.
