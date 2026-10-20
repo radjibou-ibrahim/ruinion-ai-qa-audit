@@ -152,3 +152,17 @@ Les pages de connexion et de création d'espace ont été observées pendant la 
 - Ce comportement est à distinguer de la déconnexion observée après une période d'inactivité : dans ce cas, la déconnexion aurait eu lieu pendant l'utilisation.
 - **À vérifier :** durée écoulée depuis la dernière action, fonctionnalité utilisée au moment de la déconnexion, présence d'un message d'expiration de session, conservation du travail en cours et possibilité de reprendre sans perte de données.
 - **Statut :** observation rapportée par l'utilisateur ; reproduction contrôlée non encore effectuée.
+
+
+## TEST-020 — Création d'une invitation et gestion du lien
+**Résultat : PASS partiel — création confirmée ; copie et acceptation du lien non vérifiées.**
+- Depuis **Paramètres > Équipe**, une invitation a été créée pour une adresse e-mail de test, avec le rôle **Membre**.
+- Un message de confirmation vert indique : « Invitation créée. Copiez le lien ci-dessous pour le partager. »
+- Le compteur affiche **1 invitation** pour l'organisation « Micro Finance ».
+- Dans l'onglet **Invitations**, l'invitation apparaît avec le statut **En attente**.
+- La date de création affichée est le **20 octobre 2026** et la date d'expiration le **27 octobre 2026**, ce qui correspond à la validité annoncée de 7 jours.
+- Le panneau **Lien d'invitation** affiche un lien et un bouton **Copier le lien**. L'interface avertit que le lien doit être copié avant de quitter la page, car il ne pourra plus être affiché ensuite.
+- Le menu d'actions permet d'ouvrir une boîte de dialogue **Révoquer l'invitation**, qui avertit que le lien deviendra inutilisable. La révocation n'a pas été confirmée.
+- L'interface précise qu'aucun e-mail automatique n'est envoyé : le lien doit être partagé manuellement.
+- **À tester ensuite :** bouton « Copier le lien » (confirmation visuelle et contenu réellement copié), ouverture du lien en session séparée, parcours d'acceptation, expiration et révocation effective.
+- **Limite :** le lien n'a pas encore été ouvert avec le compte invité ; la création réussie ne confirme donc pas que le parcours d'acceptation fonctionne.
