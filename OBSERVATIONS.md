@@ -80,3 +80,20 @@ Les pages de connexion et de création d'espace ont été observées pendant la 
 - **Impact potentiel :** l'utilisateur peut créer par inadvertance une nouvelle réunion avec un titre ancien, ou croire que le champ a été réinitialisé alors qu'il ne l'a pas été.
 - **Limite :** on ne sait pas encore si ce comportement provient d'une valeur par défaut, d'un brouillon local, d'une préférence mémorisée ou d'une règle fonctionnelle. Il n'est pas établi que les données de réunion précédentes aient été restaurées ; seul le titre du champ est observé.
 - **Vérification recommandée :** modifier le titre, quitter la page sans lancer de traitement, puis revenir à « Nouvelle réunion » ; comparer également après actualisation et après reconnexion. Noter si le titre revient toujours à « Réunion commerciale ».
+
+
+## TEST-010 — Le titre saisi revient à une ancienne valeur après actualisation
+**Statut : comportement reproductible observé ; règle attendue à confirmer.**
+- **Action effectuée :** le titre du champ « Titre de la réunion » a été remplacé par `TEST TITRE TEMPORAIRE`, puis la page a été actualisée.
+- **Résultat observé :** le champ est revenu à « Réunion commerciale ».
+- **Interprétation prudente :** l'application ne conserve pas la nouvelle valeur saisie lors de cette actualisation et réaffiche l'ancien titre. Il reste à déterminer si cela provient d'une valeur par défaut, d'un brouillon conservé, d'un état mis en cache ou d'un comportement voulu.
+- **Impact potentiel :** risque de créer une réunion avec un titre différent de celui que l'utilisateur vient de saisir, ou de devoir ressaisir les informations.
+- **Sévérité/priorité :** à confirmer après vérification de la règle fonctionnelle et de la persistance attendue.
+
+## TEST-011 — Page blanche lors de l'actualisation, y compris pendant une activité
+**Statut : anomalie intermittente rapportée ; reproduction/diagnostic à poursuivre.**
+- **Observation complémentaire :** l'auditeur indique que la page blanche peut apparaître même lorsqu'il est actif sur le site, et qu'une actualisation peut elle-même aboutir à une page blanche.
+- **Impact potentiel :** l'utilisateur ne peut plus poursuivre le parcours normalement et peut devoir revenir en arrière ou se reconnecter.
+- **Portée :** cette observation signifie que l'inactivité seule n'explique pas tous les cas rapportés. Il ne faut pas attribuer la cause à une expiration de session sans preuve.
+- **Cause :** inconnue à ce stade ; aucune perte de données n'est confirmée.
+- **Suite proposée :** relever la page exacte, l'heure, les actions juste avant l'erreur, et si le menu de navigation fonctionne encore ; vérifier si le problème survient après une actualisation depuis plusieurs pages différentes.
