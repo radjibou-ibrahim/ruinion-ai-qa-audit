@@ -71,3 +71,12 @@ Le champ « Risques ou blocages : Non précisé » n'est pas en soi un défaut :
 
 ## Authentification
 Les pages de connexion et de création d'espace ont été observées pendant la reconnaissance initiale. Les tests fonctionnels de connexion valide et invalide restent à exécuter. L'ordre réel des exécutions sera indiqué fidèlement.
+
+
+## TEST-009 — Conservation du titre prérempli après déconnexion/reconnexion
+**Statut : anomalie d'expérience utilisateur observée ; comportement attendu à confirmer.**
+- **Observation :** après une déconnexion puis une reconnexion, le champ « Titre de la réunion » de l'écran « Nouvelle réunion » contient encore automatiquement « Réunion commerciale », titre utilisé lors du premier test.
+- **Preuve :** capture d'écran du 20 octobre 2026 montrant le champ prérempli.
+- **Impact potentiel :** l'utilisateur peut créer par inadvertance une nouvelle réunion avec un titre ancien, ou croire que le champ a été réinitialisé alors qu'il ne l'a pas été.
+- **Limite :** on ne sait pas encore si ce comportement provient d'une valeur par défaut, d'un brouillon local, d'une préférence mémorisée ou d'une règle fonctionnelle. Il n'est pas établi que les données de réunion précédentes aient été restaurées ; seul le titre du champ est observé.
+- **Vérification recommandée :** modifier le titre, quitter la page sans lancer de traitement, puis revenir à « Nouvelle réunion » ; comparer également après actualisation et après reconnexion. Noter si le titre revient toujours à « Réunion commerciale ».
