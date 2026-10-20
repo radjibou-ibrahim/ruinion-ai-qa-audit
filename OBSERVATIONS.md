@@ -199,3 +199,11 @@ La révocation d'une invitation et l'invalidation effective du lien associé n'o
 Après avoir sélectionné « Se déconnecter », l'application a redirigé vers la page « Connexion » de Ruinion AI. Le formulaire de connexion est affiché avec les champs Adresse e-mail et Mot de passe, ainsi que le bouton « Se connecter ». La déconnexion volontaire est donc confirmée visuellement.
 
 **Limite :** la protection des pages internes après déconnexion (par exemple, via le bouton Retour du navigateur ou une URL directe) n'a pas encore été vérifiée.
+
+
+### TEST-023B — Connexion avec des identifiants valides
+**Résultat : PASS**
+
+Après la déconnexion volontaire, l'utilisateur a saisi les identifiants valides de son compte et confirmé que la connexion fonctionne. L'accès à l'application est rétabli.
+
+**Limite :** les scénarios de connexion avec mot de passe incorrect, adresse e-mail invalide/inconnue et champs obligatoires vides n'ont pas été testés. La protection des pages privées après déconnexion reste également à vérifier.
