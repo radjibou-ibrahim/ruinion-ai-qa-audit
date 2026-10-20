@@ -167,3 +167,21 @@ Les pages de connexion et de création d'espace ont été observées pendant la 
 - **Copie du lien : PASS selon confirmation de l'auditeur.** L'utilisateur confirme que le lien est copié sans erreur. Le contenu collé dans une autre application et l'ouverture du lien ne sont pas encore vérifiés.
 - **À tester ensuite :** ouverture du lien en session séparée, parcours d'acceptation, expiration et révocation effective.
 - **Limite :** le lien n'a pas encore été ouvert avec le compte invité ; la création réussie ne confirme donc pas que le parcours d'acceptation fonctionne.
+
+
+## TEST-021 — Acceptation de l'invitation et contrôle des permissions du membre
+**Résultat : PASS pour l'acceptation et l'ajout au groupe ; restriction d'accès observée pour le rôle Membre.**
+
+### Acceptation de l'invitation
+- Le lien d'invitation a été ouvert. Lorsque le compte initialement connecté ne correspondait pas à l'adresse invitée, l'application a affiché : « Cette invitation concerne une autre adresse e-mail. »
+- Après avoir choisi l'option permettant d'utiliser un autre compte et s'être connecté avec le compte destinataire, l'utilisateur a été redirigé vers la page des réunions.
+- Depuis le compte Propriétaire, la liste des membres de l'organisation « Micro Finance » affiche désormais deux personnes : le propriétaire « Bordeaux Lancer » et le compte destinataire `galaxydecor02@gmail.com`, dont le nom affiché est « galaxydecor02@gmail.com Beti » et le rôle est « Membre ».
+- Ces éléments confirment que l'invitation a été acceptée et que le compte destinataire a été ajouté à l'organisation.
+
+### Vérification des permissions
+- Depuis le compte destinataire (rôle **Membre**), l'accès à la page de gestion de l'équipe affiche le message « Accès réservé » et précise que cette gestion est accessible au propriétaire et aux administrateurs.
+- Ce résultat est cohérent avec la restriction annoncée pour le rôle Membre ; aucun défaut de permission n'est établi par cette observation.
+
+### Limites
+- L'utilisation du lien après révocation et après expiration n'a pas été testée.
+- Les permissions détaillées sur les réunions, transcriptions, résumés et comptes rendus partagés n'ont pas été vérifiées.
