@@ -42,7 +42,11 @@ Le champ « Risques ou blocages : Non précisé » n'est pas en soi un défaut :
 **Statut : vérification partielle.** Les actions et décisions sont visibles dans le compte rendu ; la divergence de date est propagée. Une validation métier exhaustive n'a pas été réalisée.
 
 ## TEST-006 — Téléchargement et vérification du document Word
-**Statut : NOT RUN.** Le bouton « Télécharger le Word » est visible, mais le téléchargement et le contenu du fichier n'ont pas été vérifiés.
+**Statut : PASS pour le téléchargement et l'ouverture ; examen du contenu partiel.**
+- Le document Word a été téléchargé puis ouvert sur un appareil mobile.
+- Le document contient un titre, une synthèse, les échanges et points clés, les décisions et un tableau de plan d'actions.
+- **Observation d'affichage mobile :** le tableau de plan d'actions dépasse la largeur visible de l'écran et ses colonnes ne sont pas toutes visibles simultanément dans la capture. Il reste à vérifier sur ordinateur et à distinguer un problème de mise en page du document d'une limite d'affichage de l'application mobile.
+- La vérification exhaustive du contenu et de la mise en page sur ordinateur n'a pas été effectuée.
 
 ## TEST-007 — Importation d'un fichier audio local et génération des résultats
 **Statut : PASS pour l'importation et la génération ; vérification fonctionnelle partielle.**
@@ -97,3 +101,25 @@ Les pages de connexion et de création d'espace ont été observées pendant la 
 - **Portée :** cette observation signifie que l'inactivité seule n'explique pas tous les cas rapportés. Il ne faut pas attribuer la cause à une expiration de session sans preuve.
 - **Cause :** inconnue à ce stade ; aucune perte de données n'est confirmée.
 - **Suite proposée :** relever la page exacte, l'heure, les actions juste avant l'erreur, et si le menu de navigation fonctionne encore ; vérifier si le problème survient après une actualisation depuis plusieurs pages différentes.
+
+
+## TEST-012 — Copie de la transcription, du résumé et du compte rendu
+**Statut : PASS selon confirmation de l'auditeur.**
+- L'auditeur confirme que les boutons de copie de la transcription, du résumé et du compte rendu fonctionnent.
+- Aucun défaut n'a été signalé sur ces boutons pendant le test.
+- Les essais détaillés (texte exact copié, collage dans une autre application et comportement sur différents appareils) n'ont pas été documentés ; le résultat est limité au fonctionnement confirmé par l'auditeur.
+
+## TEST-013 — Consultation de l'historique après importation audio
+**Statut : PASS partiel.**
+- L'historique affiche deux réunions terminées : « Test d'importation audio — Réunion de suivi » et « Réunion commerciale ».
+- Les cartes présentent notamment le titre, la date, la durée de l'audio, un extrait de contenu et le nombre de participants.
+- Cela confirme l'affichage des deux réunions dans l'historique à cet instant, mais pas la persistance après déconnexion/reconnexion ni l'exhaustivité de l'historique.
+
+## TEST-014 — Consultation de la rubrique Équipe
+**Statut : observation de l'interface ; actions fonctionnelles non testées.**
+- La page « Équipe » affiche une organisation nommée « Micro Finance », un membre actif et le rôle « Propriétaire ».
+- L'auditeur précise que « Micro Finance » est le nom d'organisation qu'il a renseigné lors de la création de son compte ; ce libellé est donc cohérent avec les données fournies lors de l'inscription.
+- Un onglet « Invitations », une recherche de membres et un formulaire d'invitation sont visibles.
+- Le formulaire demande une adresse e-mail et un rôle ; l'interface indique qu'un lien valable 7 jours sera créé et qu'aucun e-mail automatique ne sera envoyé.
+- **Non testé :** création d'une invitation, utilisation ou expiration du lien, recherche effective, actualisation de la liste, modification/suppression d'un membre et contrôle des permissions.
+- Aucune invitation n'a été envoyée et aucune modification n'a été réalisée pendant cette observation.
