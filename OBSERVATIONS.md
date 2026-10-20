@@ -207,3 +207,15 @@ Après avoir sélectionné « Se déconnecter », l'application a redirigé vers
 Après la déconnexion volontaire, l'utilisateur a saisi les identifiants valides de son compte et confirmé que la connexion fonctionne. L'accès à l'application est rétabli.
 
 **Limite :** les scénarios de connexion avec mot de passe incorrect, adresse e-mail invalide/inconnue et champs obligatoires vides n'ont pas été testés. La protection des pages privées après déconnexion reste également à vérifier.
+
+
+### TEST-023C — Connexion avec un mot de passe incorrect
+**Résultat : PASS**
+
+**Étape réalisée :** tentative de connexion avec l'adresse e-mail du compte de test et un mot de passe incorrect.
+
+**Résultat observé :** l'application refuse la connexion et affiche le message « Invalid email or password ». L'accès à l'espace utilisateur n'est pas accordé.
+
+**Évaluation :** le comportement observé correspond au résultat attendu pour des identifiants invalides. Le message ne précise pas si l'adresse e-mail ou le mot de passe est incorrect, ce qui évite de révéler directement lequel des deux champs est valide.
+
+**Limite :** les tests avec adresse e-mail inconnue, champs vides et accès à une page privée après déconnexion restent non exécutés.
