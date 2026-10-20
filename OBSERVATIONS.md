@@ -45,14 +45,21 @@ Le champ « Risques ou blocages : Non précisé » n'est pas en soi un défaut :
 **Statut : NOT RUN.** Le bouton « Télécharger le Word » est visible, mais le téléchargement et le contenu du fichier n'ont pas été vérifiés.
 
 ## TEST-007 — Importation d'un fichier audio
-**Statut : PARTIELLEMENT PASS — fichier sélectionné et reconnu par l'interface.**
-
+**Statut : PARTIELLEMENT PASS — fichier sélectionné et reconnu par l'interface ; génération interrompue/non vérifiée.**
 - Nom affiché : `Test d'audio.m4a`.
 - Durée affichée par le lecteur : 00:00:19.
-- L'interface indique « Audio prêt ».
-- Le bouton « Générer les résumés » est actif.
+- L'interface indiquait « Audio prêt » et le bouton « Générer les résumés » était actif.
+- Après la tentative de lancement du traitement, une page blanche est apparue. Aucun résultat de génération n'a pu être observé.
 
-**Limite :** cette observation confirme la sélection et la préparation apparente du fichier, mais pas encore la génération des résultats. Le traitement doit être lancé puis ses résultats examinés.
+**Limite :** la capture montre une page blanche sur `ai.jonathanzadi.com`, mais ne permet pas à elle seule d'établir la cause. L'utilisateur rapporte que la page devient blanche après quelques minutes d'inactivité et reste blanche même après actualisation. Cette observation doit être reproduite pour confirmer si elle est liée à l'inactivité, au traitement de l'audio ou à une autre cause.
+
+## ANOMALIE À CONFIRMER — Page blanche après inactivité/actualisation
+**Statut : anomalie suspectée, reproduction à poursuivre.**
+- **Comportement rapporté :** après quelques minutes d'inactivité, la page de Ruinion AI devient blanche ; actualiser la page ne rétablit pas l'affichage.
+- **Preuve disponible :** capture d'écran d'une page blanche sur le domaine de l'application.
+- **Impact potentiel :** l'utilisateur ne peut plus accéder à l'interface ni poursuivre son travail sans récupération supplémentaire.
+- **Sévérité/priorité :** à déterminer après reproduction et vérification du périmètre (une page ou toute l'application), de la session et des étapes de récupération.
+- **Important :** ne pas conclure à un défaut de session ou à un bug du traitement audio sans éléments complémentaires.
 
 ## TEST-008 — Historique et persistance
 **Statut : NOT RUN.**
