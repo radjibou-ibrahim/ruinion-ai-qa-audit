@@ -51,18 +51,16 @@ Le champ « Risques ou blocages : Non précisé » n'est pas en soi un défaut :
 - L'interface indiquait « Audio prêt » et le bouton « Générer les résumés » était actif.
 - Après la tentative de lancement du traitement, une page blanche est apparue. Aucun résultat de génération n'a pu être observé.
 
-**Limite :** la capture montre une page blanche sur `ai.jonathanzadi.com`, mais ne permet pas à elle seule d'établir la cause. L'utilisateur rapporte que la page devient blanche après quelques minutes d'inactivité et reste blanche même après actualisation. Cette observation doit être reproduite pour confirmer si elle est liée à l'inactivité, au traitement de l'audio ou à une autre cause.
-
-## ANOMALIE À CONFIRMER — Page blanche après inactivité/actualisation
+## ANOMALIE À CONFIRMER — Page blanche / retour à un état antérieur après inactivité
 **Statut : anomalie suspectée, reproduction à poursuivre.**
-- **Comportement rapporté :** après quelques minutes d'inactivité, la page de Ruinion AI devient blanche ; actualiser la page ne rétablit pas l'affichage.
-- **Preuve disponible :** capture d'écran d'une page blanche sur le domaine de l'application.
-- **Impact potentiel :** l'utilisateur ne peut plus accéder à l'interface ni poursuivre son travail sans récupération supplémentaire.
-- **Sévérité/priorité :** à déterminer après reproduction et vérification du périmètre (une page ou toute l'application), de la session et des étapes de récupération.
-- **Important :** ne pas conclure à un défaut de session ou à un bug du traitement audio sans éléments complémentaires.
+- **Comportements rapportés par l'auditeur :** après quelques minutes d'inactivité, la page peut devenir blanche ; actualiser ne rétablit pas toujours l'affichage. Le bouton Retour du navigateur peut ramener à la page précédente, correspondant à un état antérieur à l'inactivité. À certaines occasions, l'application demande une nouvelle connexion.
+- **Preuve disponible :** capture d'écran d'une page blanche et récit des étapes de récupération.
+- **Impact potentiel :** interruption du parcours utilisateur, nécessité de revenir en arrière ou de se reconnecter ; risque de perte de travail non confirmé.
+- **Sévérité/priorité :** à déterminer après reproduction et vérification de la durée d'inactivité, de la session, de la page concernée et de la persistance des données.
+- **Limite d'interprétation :** ces observations pourraient être liées à l'expiration de session, à la navigation ou à un problème d'affichage. La cause n'est pas établie et la perte de données n'a pas été constatée.
 
 ## TEST-008 — Historique et persistance
-**Statut : NOT RUN.**
+**Statut : NOT RUN.** La persistance après reconnexion doit être vérifiée séparément ; aucune perte de données n'est confirmée à ce stade.
 
 ## Authentification
 Les pages de connexion et de création d'espace ont été observées pendant la reconnaissance initiale. Les tests fonctionnels de connexion valide et invalide restent à exécuter. L'ordre réel des exécutions sera indiqué fidèlement.
