@@ -8,58 +8,47 @@ Vérifier les parcours les plus utiles pour l'utilisateur et relever uniquement 
 **Statut : PASS (enregistrement et écoute)**
 
 - Un enregistrement de 22 secondes a été obtenu.
-- La lecture était disponible et l'auditeur a confirmé que la voix était audible et compréhensible.
-- L'interface proposait le téléchargement de l'audio.
-
-Cela ne valide pas à lui seul la fidélité de la transcription ou des contenus générés.
+- L'auditeur a confirmé que la voix était audible et compréhensible.
+- La lecture et le téléchargement de l'audio étaient proposés.
 
 ## TEST-002 — Transcription de l'audio
-**Statut : FAIL — divergence factuelle constatée, à conserver comme anomalie candidate jusqu'à une dernière confirmation si nécessaire.**
+**Statut : FAIL — divergence factuelle observée, confirmée par l'auditeur.**
 
-### Référence
-L'auditeur confirme avoir prononcé : « Nous décidons de faire un point de suivi mardi prochain. »
+**Référence prononcée :** « Nous décidons de faire un point de suivi mardi prochain. »  
+**Transcription affichée :** « Nous décidons de faire un point de suivi lundi prochain. »
 
-### Résultat affiché par Ruinion AI
-La transcription affiche : « Nous décidons de faire un point de suivi lundi prochain. »
+**Impact potentiel :** une échéance modifiée peut induire l'utilisateur en erreur et entraîner un suivi manqué ou retardé.
 
-### Impact potentiel
-La modification du jour peut induire l'utilisateur en erreur sur la date d'une action convenue en réunion. Dans un contexte professionnel, cela peut provoquer un rendez-vous manqué ou un suivi retardé.
+**Sévérité proposée :** Moyenne. **Priorité proposée :** P1, à confirmer avec le développeur selon la fréquence et l'usage.
 
-### Sévérité et priorité proposées
-- **Sévérité : Moyenne**, car une information opérationnelle est modifiée, sans perte totale du compte rendu.
-- **Priorité : P1 proposée**, à confirmer par le développeur selon la fréquence du problème et les usages concernés.
-
-### Preuves et limites
-La capture d'écran montre la transcription « lundi prochain » et l'auditeur confirme avoir prononcé « mardi prochain ». La preuve audio n'a pas été jointe au repository public. L'écart est documenté à partir des observations transmises.
+**Preuve :** capture de la transcription et confirmation de l'auditeur. Le fichier audio n'est pas publié dans le repository.
 
 ## TEST-003 — Résumé court
-**Statut : examen en cours.**
+**Statut : observation effectuée ; vérification de fidélité partielle.**
 
-La capture du résumé montre :
+Le résumé affiché reprend les principales informations :
 - réunion commerciale prévue le lundi 26 octobre 2026 ;
 - proposition tarifaire d'Ibrahim avant vendredi ;
 - budget de 500 euros validé par Jonathan ;
 - point de suivi prévu « lundi prochain » ;
 - responsable du point de suivi non précisé.
 
-Le résumé reprend les principales idées, mais reprend aussi la divergence « lundi prochain » au lieu de « mardi prochain ». Ce point dépendant de la transcription, il ne constitue pas une seconde anomalie indépendante à ce stade.
-
-Le commentaire « Le responsable du point de suivi n'est pas précisé » est une observation du résumé ; il ne sera considéré comme un défaut que si cette information était explicitement attendue et n'est pas disponible dans la source.
+Le résumé reproduit la divergence de date observée dans la transcription. Il s'agit probablement d'une conséquence du même écart, et non d'un défaut indépendant. La mention du responsable non précisé n'est pas qualifiée de bug sans règle métier supplémentaire.
 
 ## TEST-004 — Compte rendu détaillé
-**Statut : NOT RUN — à examiner.**
+**Statut : NOT RUN — l'onglet n'a pas encore été examiné.**
 
 ## TEST-005 — Extraction des actions et décisions
-**Statut : NOT RUN — à examiner.**
+**Statut : NOT RUN — à vérifier dans le contenu disponible.**
 
 ## TEST-006 — Téléchargement et vérification du document Word
-**Statut : NOT RUN — à examiner.**
+**Statut : NOT RUN.**
 
 ## TEST-007 — Importation d'un fichier audio
-**Statut : NOT RUN — prévu ensuite.**
+**Statut : NOT RUN — prochaine étape après l'examen du compte rendu.**
 
 ## TEST-008 — Historique et persistance
-**Statut : NOT RUN — à examiner.**
+**Statut : NOT RUN.**
 
 ## Authentification
-La page de connexion et la page de création d'espace ont été observées avant les tests fonctionnels, mais aucun test de connexion valide ou invalide n'a encore été exécuté. Ils seront consignés selon leur ordre réel d'exécution.
+Les pages de connexion et de création d'espace ont été observées lors de la reconnaissance initiale. Les tests fonctionnels de connexion valide et invalide restent à exécuter. L'ordre réel des exécutions sera indiqué fidèlement dans le rapport.
