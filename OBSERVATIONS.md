@@ -219,3 +219,13 @@ Après la déconnexion volontaire, l'utilisateur a saisi les identifiants valide
 **Évaluation :** le comportement observé correspond au résultat attendu pour des identifiants invalides. Le message ne précise pas si l'adresse e-mail ou le mot de passe est incorrect, ce qui évite de révéler directement lequel des deux champs est valide.
 
 **Limite :** les tests avec adresse e-mail inconnue, champs vides et accès à une page privée après déconnexion restent non exécutés.
+
+
+### TEST-023D — Soumission du formulaire de connexion avec les deux champs vides
+**Résultat : PASS**
+
+**Étape réalisée :** clic sur « Se connecter » sans renseigner l'adresse e-mail ni le mot de passe.
+
+**Résultat observé :** l'application reste sur la page de connexion et affiche le message « Renseignez votre email et votre mot de passe. ».
+
+**Évaluation :** la soumission est bloquée et un message indique clairement les champs à renseigner. Le comportement observé correspond au résultat attendu.
