@@ -144,3 +144,11 @@ Les pages de connexion et de création d'espace ont été observées pendant la 
 - Le compteur indique « 1 réunion » et la carte correspondante est visible.
 - Test effectué sur navigateur mobile.
 - **Non testé :** recherche sans résultat, recherche par nom de participant ou mot-clé du contenu, casse/accents, effacement du champ et comportement avec un grand nombre de réunions.
+
+
+## TEST-019 — Déconnexion pendant une activité
+**Résultat : anomalie observée — à reproduire et caractériser.**
+- L'utilisateur rapporte avoir été déconnecté alors qu'il était encore actif dans l'application.
+- Ce comportement est à distinguer de la déconnexion observée après une période d'inactivité : dans ce cas, la déconnexion aurait eu lieu pendant l'utilisation.
+- **À vérifier :** durée écoulée depuis la dernière action, fonctionnalité utilisée au moment de la déconnexion, présence d'un message d'expiration de session, conservation du travail en cours et possibilité de reprendre sans perte de données.
+- **Statut :** observation rapportée par l'utilisateur ; reproduction contrôlée non encore effectuée.
