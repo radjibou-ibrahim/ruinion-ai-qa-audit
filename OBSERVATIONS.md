@@ -164,5 +164,6 @@ Les pages de connexion et de création d'espace ont été observées pendant la 
 - Le panneau **Lien d'invitation** affiche un lien et un bouton **Copier le lien**. L'interface avertit que le lien doit être copié avant de quitter la page, car il ne pourra plus être affiché ensuite.
 - Le menu d'actions permet d'ouvrir une boîte de dialogue **Révoquer l'invitation**, qui avertit que le lien deviendra inutilisable. La révocation n'a pas été confirmée.
 - L'interface précise qu'aucun e-mail automatique n'est envoyé : le lien doit être partagé manuellement.
-- **À tester ensuite :** bouton « Copier le lien » (confirmation visuelle et contenu réellement copié), ouverture du lien en session séparée, parcours d'acceptation, expiration et révocation effective.
+- **Copie du lien : PASS selon confirmation de l'auditeur.** L'utilisateur confirme que le lien est copié sans erreur. Le contenu collé dans une autre application et l'ouverture du lien ne sont pas encore vérifiés.
+- **À tester ensuite :** ouverture du lien en session séparée, parcours d'acceptation, expiration et révocation effective.
 - **Limite :** le lien n'a pas encore été ouvert avec le compte invité ; la création réussie ne confirme donc pas que le parcours d'acceptation fonctionne.
