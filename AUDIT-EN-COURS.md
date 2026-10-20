@@ -9,7 +9,7 @@
 
 Cet audit vise à apporter au développeur un regard centré sur l'utilisateur et sur la valeur du produit : vérifier le parcours principal, relever les écarts observés, expliquer leurs conséquences et recommander des améliorations concrètes.
 
-Le rapport sera complété uniquement à partir des tests réellement exécutés et des éléments fournis. Aucun défaut n'est confirmé dans cette version initiale.
+Le rapport est mis à jour au fil des tests et des éléments fournis. Une divergence de transcription a été confirmée ; d'autres comportements restent à reproduire ou à clarifier.
 
 ## 2. Périmètre prévu
 
@@ -59,7 +59,19 @@ Aucun test fonctionnel n'est déclaré exécuté sur la base de ces seules captu
 
 | ID | Parcours | Résultat | Preuve | Commentaire |
 |---|---|---|---|---|
-| — | Aucun test exécuté à ce stade | Non exécuté | — | À compléter après exécution réelle |
+| TEST-001 | Enregistrement audio depuis le microphone | PASS partiel | Écoute confirmée | Enregistrement de 22 s audible ; lecture et téléchargement proposés. |
+| TEST-002 | Transcription de l'audio microphone | FAIL | Audio de référence et transcription affichée | « mardi prochain » retranscrit « lundi prochain » ; divergence factuelle confirmée. |
+| TEST-003 | Résumé court | Examen partiel | Résumé affiché | Informations principales reprises, mais divergence de date propagée. |
+| TEST-004 | Compte rendu détaillé | Examiné — fidélité partielle | Compte rendu affiché | Sections structurées ; divergence de date propagée depuis la transcription. |
+| TEST-005 | Extraction des actions et décisions | Examen partiel | Compte rendu affiché | Actions et décisions visibles ; validation métier exhaustive non réalisée. |
+| TEST-006 | Téléchargement et ouverture du document Word | PASS partiel | Document ouvert sur mobile | Téléchargement et ouverture réussis ; contrôle complet du contenu et de la mise en page restant à faire. |
+| TEST-007 | Importation d'un fichier audio local | PASS partiel | Écran « Audio prêt », puis réunion terminée | Fichier M4A de 19 s importé et traité ; transcription de « mardi prochain » correcte dans cet essai. |
+| TEST-008 | Historique et persistance des réunions | PASS partiel | Historique visible | Deux réunions affichées ; persistance après déconnexion/reconnexion non testée. |
+| TEST-009/010 | Titre prérempli après reconnexion/actualisation | Observation à clarifier | Capture et manipulation rapportées | « Réunion commerciale » revient dans le champ après actualisation ; règle attendue non confirmée. |
+| TEST-011 | Page blanche après inactivité ou actualisation | INCONCLUSIVE — anomalie rapportée | Captures et récit de l'auditeur | Peut survenir après inactivité ou actualisation même en activité ; cause et perte éventuelle de données non déterminées. |
+| TEST-012 | Copie de la transcription, du résumé et du compte rendu | PASS selon l'auditeur | Confirmation de l'auditeur | Les trois boutons de copie fonctionnent. |
+| TEST-013 | Consultation de l'historique | PASS partiel | Capture de l'historique | Deux réunions terminées visibles ; conservation à long terme non testée. |
+| TEST-014 | Rubrique Équipe | Observation de l'interface | Captures de la page Équipe | Membre, rôle et formulaire d'invitation visibles ; actions d'invitation et permissions non testées. |
 
 Statuts utilisés :
 - **PASS** : résultat attendu observé.
@@ -68,9 +80,19 @@ Statuts utilisés :
 - **NOT RUN** : test non exécuté.
 - **INCONCLUSIVE** : les éléments ne permettent pas de conclure.
 
-## 5. Problèmes confirmés
+## 5. Problèmes et points d'attention
 
-Aucun problème confirmé à ce stade.
+### 5.1 Divergence de transcription — confirmée
+Dans l'audio enregistré depuis le microphone, la phrase prononcée « Nous décidons de faire un point de suivi mardi prochain » apparaît comme « lundi prochain » dans la transcription. La même divergence est reprise dans le résumé et le compte rendu détaillé. Elle est comptée comme une anomalie principale, et non comme trois bugs indépendants. Sévérité proposée : moyenne ; priorité à discuter avec le développeur.
+
+### 5.2 Page blanche — anomalie intermittente rapportée, cause inconnue
+L'auditeur rapporte une page blanche après une période d'inactivité, mais également après actualisation et parfois alors qu'il utilise encore le site. Le bouton Retour peut restaurer une page précédente et une reconnexion est parfois demandée. La cause n'est pas déterminée et aucune perte de données n'est confirmée. Ce point reste à reproduire.
+
+### 5.3 Titre de réunion réaffiché après actualisation — comportement à clarifier
+Le champ « Titre de la réunion » revient à « Réunion commerciale » après actualisation, même après la saisie d'une valeur temporaire. Le comportement attendu n'est pas encore établi ; il est enregistré comme point d'attention et non comme défaut métier définitivement confirmé.
+
+### 5.4 Affichage du tableau Word sur mobile — à vérifier
+Dans la capture du document téléchargé, le tableau du plan d'actions dépasse la largeur visible de l'écran. Une vérification sur ordinateur est nécessaire avant de conclure à un défaut de mise en page du document généré.
 
 Pour chaque problème confirmé, le rapport précisera :
 - ce que l'utilisateur essaie de faire ;
@@ -82,7 +104,7 @@ Pour chaque problème confirmé, le rapport précisera :
 
 ## 6. Risques et recommandations
 
-Cette section sera complétée à partir des observations et tests réels. Les risques non vérifiés seront clairement présentés comme des points à examiner, et non comme des défauts avérés.
+Les tests de la rubrique Équipe restent limités à l'observation de l'interface : aucune invitation n'a été créée et aucun rôle ni droit d'accès n'a été modifié. Les boutons de copie de la transcription, du résumé et du compte rendu ont été confirmés fonctionnels par l'auditeur. La rubrique Équipe, l'utilisation et l'expiration des invitations, la persistance après reconnexion et l'affichage du document Word sur ordinateur restent à tester. Les risques non vérifiés sont présentés comme des points à examiner, et non comme des défauts avérés.
 
 ## 7. Limites
 
