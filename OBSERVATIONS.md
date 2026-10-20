@@ -123,3 +123,15 @@ Les pages de connexion et de création d'espace ont été observées pendant la 
 - Le formulaire demande une adresse e-mail et un rôle ; l'interface indique qu'un lien valable 7 jours sera créé et qu'aucun e-mail automatique ne sera envoyé.
 - **Non testé :** création d'une invitation, utilisation ou expiration du lien, recherche effective, actualisation de la liste, modification/suppression d'un membre et contrôle des permissions.
 - Aucune invitation n'a été envoyée et aucune modification n'a été réalisée pendant cette observation.
+
+
+## TEST-016 — Consultation des paramètres du compte et de l'équipe
+**Statut : affichage observé ; sauvegarde et effets des options non testés.**
+- La page Paramètres présente une section « Votre accès » avec le nom du compte et le rôle « Propriétaire ».
+- Dans « Règles d'invitation », la durée de validité du lien est réglée sur « 7 jours ».
+- L'option « Autoriser les administrateurs à inviter » apparaît activée.
+- Dans « Notifications », l'option « Activité des invitations » apparaît activée.
+- Les rubriques « Documents juridiques » donnent accès à la politique de confidentialité et aux conditions d'utilisation.
+- Le bouton « Enregistrer les modifications » est visible.
+- **Non testé :** ouverture des documents juridiques, changement des options, enregistrement, persistance après actualisation et effet réel des notifications ou permissions.
+- Aucune option n'a été modifiée et aucune sauvegarde n'a été effectuée durant cette observation.
