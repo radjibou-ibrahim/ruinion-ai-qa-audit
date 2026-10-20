@@ -135,3 +135,12 @@ Les pages de connexion et de création d'espace ont été observées pendant la 
 - Le bouton « Enregistrer les modifications » est visible.
 - **Non testé :** ouverture des documents juridiques, changement des options, enregistrement, persistance après actualisation et effet réel des notifications ou permissions.
 - Aucune option n'a été modifiée et aucune sauvegarde n'a été effectuée durant cette observation.
+
+
+## TEST-017 — Recherche d'une réunion dans l'historique
+**Résultat : PASS pour le scénario observé.**
+- Depuis l'historique des réunions, la saisie du terme « Test » filtre la liste.
+- Une seule réunion est affichée : « Test d'importation audio — Réunion de suivi ».
+- Le compteur indique « 1 réunion » et la carte correspondante est visible.
+- Test effectué sur navigateur mobile.
+- **Non testé :** recherche sans résultat, recherche par nom de participant ou mot-clé du contenu, casse/accents, effacement du champ et comportement avec un grand nombre de réunions.
