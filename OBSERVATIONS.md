@@ -16,7 +16,7 @@ Ces éléments décrivent l'interface uniquement. Le comportement de création n
 
 ## OBS-007 — Options audio et pipeline annoncé
 
-**Source :** deux captures fournies par l'auditeur, 20 octobre 2026.
+**Source :** captures fournies par l'auditeur, 20 octobre 2026.
 
 ### Faits visibles
 - Un bouton « Enregistrer » avec un compteur à 00:00:00.
@@ -25,10 +25,28 @@ Ces éléments décrivent l'interface uniquement. Le comportement de création n
 - Un état « Aucun audio sélectionné ».
 - Le bouton « Générer les résumés » apparaît désactivé lorsque aucun audio n'est sélectionné.
 
-### Valeur pour l'utilisateur
-L'interface annonce un parcours complet allant de l'audio au compte rendu et au document Word. L'audit devra vérifier si ce parcours fonctionne avec un fichier de référence et si le contenu généré est fidèle à l'audio.
-
 ### Limites
-- Les formats et la limite de 500 Mo sont des indications affichées par l'interface, pas des validations techniques effectuées.
-- Le bouton de génération désactivé en l'absence d'audio paraît cohérent avec le message affiché ; aucune anomalie n'est déclarée.
-- Aucun test d'enregistrement, d'importation ou de génération n'a encore été exécuté.
+Les formats et la limite de 500 Mo sont des indications d'interface, pas des validations techniques. Aucun test d'importation ou de génération n'a encore été exécuté.
+
+## TEST-001 — Enregistrement audio depuis le microphone
+
+**Date :** 20 octobre 2026  
+**Environnement :** navigateur mobile Android, utilisateur connecté.  
+**Statut :** PASS — enregistrement effectué et audio prêt à être vérifié.
+
+### Action réalisée
+L'auditeur a lancé un enregistrement depuis le microphone et l'interface affiche ensuite un état « Votre audio est prêt ».
+
+### Résultat observé
+- Durée affichée : 00:00:22.
+- Contrôle de lecture audio disponible.
+- Lien « Télécharger l'audio » visible.
+- Actions « Reprendre » et « Supprimer » visibles.
+- Message indiquant que le brouillon est sauvegardé sur cet appareil à la dernière pause.
+- L'interface demande de vérifier l'audio avant de lancer la génération.
+
+### Conclusion limitée
+La capture confirme qu'un enregistrement de 22 secondes a été obtenu et qu'un aperçu audio est proposé. Elle ne prouve pas encore que le son est intelligible, que le brouillon survit à une reconnexion, ni que la transcription et la génération fonctionnent.
+
+### Preuve
+Capture fournie dans la conversation le 20 octobre 2026. Le fichier original est conservé dans la conversation ; aucune capture n'est publiée dans ce repository à ce stade.
