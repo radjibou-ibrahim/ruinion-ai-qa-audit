@@ -229,3 +229,15 @@ Après la déconnexion volontaire, l'utilisateur a saisi les identifiants valide
 **Résultat observé :** l'application reste sur la page de connexion et affiche le message « Renseignez votre email et votre mot de passe. ».
 
 **Évaluation :** la soumission est bloquée et un message indique clairement les champs à renseigner. Le comportement observé correspond au résultat attendu.
+
+
+### TEST-023E — Navigation arrière après déconnexion
+**Résultat : PASS (observation limitée)**
+
+**Étape réalisée :** après déconnexion, utilisation du bouton Retour du navigateur mobile.
+
+**Résultat observé :** aucune page privée ne réapparaît ; le navigateur revient à la page d'accueil.
+
+**Évaluation :** aucun accès visuel à une page privée n'a été observé lors de cet essai. Ce résultat est rassurant, mais ne constitue pas à lui seul une preuve complète de protection des routes privées ou des données côté serveur.
+
+**Limite :** le test d'accès direct à une URL privée après déconnexion et la vérification qu'aucune donnée privée ne peut être récupérée restent non exécutés.
