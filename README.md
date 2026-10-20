@@ -2,7 +2,7 @@
 
 **Auditeur :** Radjibou IBRAHIM  
 **Application :** [Ruinion AI](https://ai.jonathanzadi.com)  
-**Statut :** Audit en cours
+**Statut :** Rapport final consolidé — version 1.0
 
 ## Pourquoi cet audit ?
 
@@ -30,6 +30,8 @@ Le périmètre sera ajusté selon les fonctionnalités disponibles et le temps a
 - Une fonctionnalité non testée ne sera pas déclarée conforme.
 - Les données confidentielles et informations personnelles ne seront pas publiées.
 
-## Rapport de travail
+## Rapport final
 
-Le document principal est [le rapport d'audit en cours](AUDIT-EN-COURS.md). Il sera mis à jour au fur et à mesure des tests et des preuves transmises par l'auditeur.
+Le document principal est le [rapport final d'audit fonctionnel](AUDIT-FONCTIONNEL-FINAL.md). Il synthétise les résultats réellement observés, les anomalies confirmées, les points à investiguer et les limites de couverture.
+
+Le [journal détaillé des observations](OBSERVATIONS.md) conserve les résultats test par test. Le [rapport de travail](AUDIT-EN-COURS.md) est conservé comme historique du suivi.
