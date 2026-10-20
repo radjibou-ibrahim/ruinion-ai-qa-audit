@@ -191,3 +191,11 @@ Les pages de connexion et de création d'espace ont été observées pendant la 
 **Statut : NOT TESTED**
 
 La révocation d'une invitation et l'invalidation effective du lien associé n'ont pas été testées. Aucun résultat ne peut donc être conclu sur le comportement de cette fonctionnalité. Ce point est à conserver dans les limites de couverture de l'audit.
+
+
+### TEST-023A — Déconnexion volontaire
+**Résultat : PASS**
+
+Après avoir sélectionné « Se déconnecter », l'application a redirigé vers la page « Connexion » de Ruinion AI. Le formulaire de connexion est affiché avec les champs Adresse e-mail et Mot de passe, ainsi que le bouton « Se connecter ». La déconnexion volontaire est donc confirmée visuellement.
+
+**Limite :** la protection des pages internes après déconnexion (par exemple, via le bouton Retour du navigateur ou une URL directe) n'a pas encore été vérifiée.
